@@ -25,6 +25,7 @@ public class ContactDAOImpl implements ContactDAO {
 	public List<Contact> listContact() {
 		Query query =  (Query) sessionFactory.getCurrentSession().createQuery("from Contact");
 		List<Contact> contactList = query.getResultList();
+		System.out.println("This Git Test : ");
 		for (Contact con : contactList){
 			System.out.println("Id : "+con.getId());
 			System.out.println("Fname : "+con.getFirstname());
